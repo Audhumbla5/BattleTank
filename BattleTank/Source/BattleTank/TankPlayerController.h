@@ -14,6 +14,10 @@ UCLASS()
 class BATTLETANK_API ATankPlayerController : public APlayerController
 {
 	GENERATED_BODY()
+
+private:
+	// Return an OUT paramet, true if hit landscape
+	bool GetSightRayHitLocation(FVector& HitLocation) const;
 	
 public:
 	void BeginPlay() override;
